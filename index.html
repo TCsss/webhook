@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>webhook</title>
+</head>
+<body>
+  <div id="main"></div>
+</body>
+<script>
+  window.onload = function () {
+    var pass = "abcde", passs;
+    for (var i = 0; i < 100; i++) {
+      const each = Math.random();
+      each = each * (each.toString().length);
+      passs += each;
+    }
+    var password = prompt('I need password');
+    if (password == passs) {
+      var abc = 'https://discordapp.com/api/webhooks/391918502497484800/NtqhvF2DFYRGFp5e15O49pDsLFa2pcGiO7xi9wr7TCTg_pWqU6HUzRc1gPz6hdl9BdWy', def = 'https://discordapp.com/api/webhooks/392218428167159808/kPKcsSzcgzxi2uW_MayDcZE7nTVCVFZMKsx5sM9kBOShTqpnfgkxJtcdQkruuHxt-9Vl';
+      alert(abc);
+      alert(def);
+    }
+  }
+</html>
