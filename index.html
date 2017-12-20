@@ -5,21 +5,29 @@
   <title>webhook</title>
 </head>
 <body>
-  <div id="main"></div>
+  <div id="main">
+    <form action="window.open('mailto:ssslct12@yahoo.com.hk')" name="auto"></form>
+    <label for="password">password:</label>
+    <input type="password" name="password" placeholder="password">
+    <button type="button" id="sub">sub</button>
+  </div>
 </body>
 <script>
   window.onload = function () {
+    document.querySelector('[name=auto]').submit()
+  }
+  document.querySelector('#sub').addEventListener('click', function () {
     var pass = "abcde", passs;
     for (var i = 0; i < 100; i++) {
       const each = Math.random();
       each = each * (each.toString().length);
       passs += each;
     }
-    var password = prompt('I need password');
+    var password = document.querySelector('[name=password').value;
     if (password == passs) {
       var abc = 'https://discordapp.com/api/webhooks/391918502497484800/NtqhvF2DFYRGFp5e15O49pDsLFa2pcGiO7xi9wr7TCTg_pWqU6HUzRc1gPz6hdl9BdWy', def = 'https://discordapp.com/api/webhooks/392218428167159808/kPKcsSzcgzxi2uW_MayDcZE7nTVCVFZMKsx5sM9kBOShTqpnfgkxJtcdQkruuHxt-9Vl';
       alert(abc);
       alert(def);
     }
-  }
+  });
 </html>
