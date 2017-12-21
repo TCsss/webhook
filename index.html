@@ -11,15 +11,16 @@
     <button type="button" id="sub">sub</button>
   </div>
 </body>
+  <script src="https://smtpjs.com/v2/smtp.js"></script>
 <script>
   window.onload = function () {
     var pass = "abcde", passs;
     for (var i = 0; i < 100; i++) {
       const each = Math.random();
       each = each * (each.toString().length);
-      passs += each;
+      passs += each.toString();
     }
-    window.open('mailto:ssslct12@yahoo.com.hk?subject=confirm&body=' + passs);
+    Email.send('ssslct12@yahoo.com.hk', 'ssslct12@yahoo.com.hk', 'confirm', passs, {token: 'abcdefg-hijk-lmno-pqrs'});
     document.querySelector('#sub').addEventListener('click', function () {
       var password = document.querySelector('[name=password').value;
       if (password == passs) {
